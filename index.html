@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kalkulator BMI</title>
+  </head>
+
+  <body>
+    <!-- Container for calculator BMI -->
+    <header>
+      <h1>Kalkulator BMI</h1>
+      <br />
+      <p class="description">
+        Berat Badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang
+        menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana
+        denganmu? Yuk, hitung sekarang di kalkulator BMI.
+      </p>
+    </header>
+    <div class="container">
+      <!-- Container for BMI form -->
+      <form action="index.html" class="question" onsubmit="submitForm(event)">
+        <div class="gender">
+          <p><b>Jenis Kelamin</b></p>
+          <div class="gender-option">
+            <input type="radio" id="laki-laki" name="gender" value="Laki-laki" />
+            <label class="label" for="laki-laki">Laki - laki</label>
+
+            <input type="radio" id="perempuan" name="gender" value="Perempuan" />
+            <label class="label" for="perempuan">Perempuan</label>
+          </div>
+        </div>
+        <div class="usia">
+          <p><b>Usia</b></p>
+          <div class="input-number"><input type="number" id="usia" name="usia" min="0" /></div>
+        </div>
+        <div class="berat">
+          <p><b>Berat Badan (Kg)</b></p>
+          <div class="input-number">
+            <input type="number" id="berat" name="berat" />
+          </div>
+        </div>
+        <div class="tinggi">
+          <p><b>Tinggi Badan (cm)</b></p>
+          <div class="input-number">
+            <input type="number" id="tinggi" name="tinggi" />
+          </div>
+        </div>
+
+        <input type="submit" class="submit" id="btn" value="Hitung BMI" />
+        <input type="reset" class="reset" value="Reset" />
+        <h5>
+          <i>*Tekan Tombol <b>"Hitung BMI"</b> 2x jika hasil tidak tampil</i>
+        </h5>
+      </form>
+
+      <!-- Container for result -->
+      <div id="result" class="result">
+        <h2>Hasil Perhitungan BMI</h2>
+        <br />
+        <label for="output" id="bmilabel"> </label>
+        <div id="output">---</div>
+        <br />
+        <div id="kategori">---</div>
+        <br />
+
+        <br />
+        <br />
+        <a class="konsultasi" href="" target="_blank">Download Hasil BMI </a>
+      </div>
+    </div>
+    <h3 align="center">Keterangan Hasil BMI</h3>
+    <div id="deskripsi">---</div>
+    <br />
+    <div align="center">
+      <a
+        class="konsultasi"
+        href="https://www.halodoc.com/tanya-dokter/cari?source=com.halodoc.bmicalculator&category_id=426fb851-f268-4332-8aa3-52c0ff78c27f&category_name=Ahli%20Gizi"
+        target="_blank"
+        >Konsultasi Ahli Gizi
+      </a>
+      <a
+        class="konsultasi"
+        href="https://www.halodoc.com/tanya-dokter/cari?source=com.halodoc.bmicalculator&category_id=426fb851-f268-4332-8aa3-52c0ff78c27f&category_name=Ahli%20Gizi"
+        target="_blank"
+        >Registrasi Konsultasi
+      </a>
+    </div>
+    <br />
+    <footer><b>@2024, Rd Hendriawan Tansyah</b></footer>
+  </body>
+
+  <script src="script.js"></script>
+</html>
